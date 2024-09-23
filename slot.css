@@ -2,12 +2,24 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  padding: 0;
+  padding: 0; 
+  background-color:#1a2b45 ;
 }
-h3{
+h3 {
   color: aliceblue;
 }
-
+.slotmachine {
+  width: 100%;
+  height: 100%;
+  background-image: url('/casino_machine.jpg'); /* Imagen de la máquina tragamonedas */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
 #app {
   width: 100%;
   height: 100%;
@@ -19,30 +31,30 @@ h3{
 }
 .background-div {
   width: 100%;
-  height: 300px; /* Ajusta según el tamaño del encabezado */
-  background-image: url('/tapGoat.jpg'); /* Imagen de fondo tipo portada */
+  height: 300px; 
+  background-image: url("/tapGoat.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative; /* Necesario para posicionar el perfil dentro */
+  position: relative; 
 }
 .profile-container {
   position: absolute;
   bottom: -50px;
   left: 10%;
   transform: translateX(-50%);
-  text-align: center; /* Asegura que el texto del nombre esté centrado */
+  text-align: center; 
 }
 .profile-div {
-  position:relative; /* Permite mover el div del perfil */
-  bottom: -10px; /* Lo posiciona justo por debajo del div de fondo */
-  left: 5%; /* Lo centra horizontalmente */
-  transform: translateX(-50%); /* Ajusta el centrado real */
+  position: relative; 
+  bottom: -50px; /* Lo posiciona justo por debajo del div de fondo */
+  left: 5%; 
+  transform: translateX(-50%); 
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Hace la imagen circular */
-  overflow: hidden; /* Oculta cualquier contenido fuera del borde */
-  border: 3px solid white; /* Añade un borde blanco */
+  border-radius: 50%; 
+  overflow: hidden; 
+  border: 3px solid white; 
 }
 
 .profile-div img {
@@ -51,7 +63,8 @@ h3{
   object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
 }
 .profile-name {
-  margin-top: 10px; /* Separación entre la imagen y el nombre */
+  position: relative;
+  margin-top: 20px; /* Separación entre la imagen y el nombre */
   font-size: 26px;
   color: rgb(134, 22, 22); /* Ajusta el color del texto */
   font-weight: bold;
