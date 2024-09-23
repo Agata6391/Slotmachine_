@@ -34,8 +34,8 @@ h3{
   text-align: center; /* Asegura que el texto del nombre esté centrado */
 }
 .profile-div {
-  position:absolute; /* Permite mover el div del perfil */
-  bottom: -50px; /* Lo posiciona justo por debajo del div de fondo */
+  position:relative; /* Permite mover el div del perfil */
+  bottom: -10px; /* Lo posiciona justo por debajo del div de fondo */
   left: 5%; /* Lo centra horizontalmente */
   transform: translateX(-50%); /* Ajusta el centrado real */
   width: 100px;
@@ -51,8 +51,8 @@ h3{
   object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
 }
 .profile-name {
-  margin-top: 200px; /* Separación entre la imagen y el nombre */
-  font-size: 16px;
+  margin-top: 10px; /* Separación entre la imagen y el nombre */
+  font-size: 26px;
   color: rgb(134, 22, 22); /* Ajusta el color del texto */
   font-weight: bold;
 }
