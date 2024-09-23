@@ -1,24 +1,20 @@
 (function () {
-    const items = [
-      '🍭',
-      '❌',
-      '⛄️',
-      '🦄',
-      '🍌',
-      '💩',
-      '👻',
-      '😻',
-      '💵',
-      '🤡',    
-      '🦖',
-      '🍎',
-      '😂',
-      '🖕',
-    ];
+  const items = [
+    'Carlos Gómez', 'María Fernández', 'Juan Rodríguez', 'Laura Pérez', 'José López',
+    'Ana Sánchez', 'Luis Ramírez', 'Carmen García', 'Diego Torres', 'Sofia Herrera',
+    'Pedro Díaz', 'Elena Ortiz', 'Miguel Romero', 'Teresa González', 'Javier Moreno',
+    'Isabel Ruiz', 'Andrés Castro', 'Rosa Márquez', 'Francisco Vázquez', 'Marta Jiménez',
+    'Daniel Navarro', 'Victoria Alonso', 'Alberto Vega', 'Patricia Cortés', 'Ricardo Paredes',
+    'Lucía Ríos', 'Eduardo Soto', 'Natalia Castillo', 'Alejandro Mendoza', 'Valentina Espinoza',
+    'Fernando Medina', 'Carolina Vargas', 'Roberto Delgado', 'Elena Silva', 'David Aguilar',
+    'Andrea Castro', 'Jorge Peña', 'Julia Flores', 'Manuel Serrano', 'Claudia Miranda',
+    'Raúl Campos', 'Laura Guzmán', 'Sergio Herrera', 'Daniela Fuentes', 'Antonio Suárez',
+    'Cristina Ortiz', 'Pablo Ramos', 'Lorena Morales', 'Enrique Cabrera', 'Alejandra León'
+  ];
     const doors = document.querySelectorAll('.door');
     
     document.querySelector('#spinner').addEventListener('click', spin);
-    document.querySelector('#reseter').addEventListener('click', init);
+    document.querySelector('#reseter').addEventListener('click', reset);
   
     function init(firstInit = true, groups = 1, duration = 1) {
       for (const door of doors) {
@@ -38,6 +34,7 @@
             arr.push(...items);
           }
           pool.push(...shuffle(arr));
+          pool.push('❓');
   
           boxesClone.addEventListener(
             'transitionstart',
@@ -55,7 +52,7 @@
             function () {
               this.querySelectorAll('.box').forEach((box, index) => {
                 box.style.filter = 'blur(0)';
-                if (index > 0) this.removeChild(box);
+                // if (index > 0) this.removeChild(box);
               });
             },
             { once: true }
@@ -70,8 +67,9 @@
           box.textContent = pool[i];
           boxesClone.appendChild(box);
         }
-        boxesClone.style.transitionDuration = `${duration > 0 ? duration : 1}s`;
-        boxesClone.style.transform = `translateY(-${door.clientHeight * (pool.length - 1)}px)`;
+        boxesClone.style.transitionDuration = `${duration > 5 ? duration : 10}s`;// ajuste de velocidad de giro 
+        // boxesClone.style.transform = `translateY(-${door.clientHeight * (pool.length - 1)}px)`;
+        setTimeout(()=>boxesClone.style.transform = `translateY(-${door.clientHeight *(pool.length - 1 - 1)}px)`, 0)
         door.replaceChild(boxesClone, boxes);
       }
     }
@@ -79,12 +77,23 @@
     async function spin() {
       init(false, 1, 2);
       
+      // for (const door of doors) {
+      //   const boxes = door.querySelector('.boxes');
+      //   const duration = parseInt(boxes.style.transitionDuration);
+      //   boxes.style.transform = 'translateY(0px)';
+      //   await new Promise((resolve) => setTimeout(resolve, duration * 1000));
+      // }
+    }
+  
+    async function reset() {
       for (const door of doors) {
+        door.dataset.spinned = '0';
         const boxes = door.querySelector('.boxes');
-        const duration = parseInt(boxes.style.transitionDuration);
-        boxes.style.transform = 'translateY(0)';
-        await new Promise((resolve) => setTimeout(resolve, duration * 100));
+        boxes.innerHTML = '';
+        boxes.style.transform = 'none'
       }
+      
+      init();
     }
   
     function shuffle([...arr]) {

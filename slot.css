@@ -1,62 +1,104 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #app {
-    width: 100%;
-    height: 100%;
-    background: #1a2b45;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .doors {
-    display: flex;
-  }
-  
-  .door {
-    background: #fafafa;
-    width: 100px;
-    height: 110px;
-    overflow: hidden;
-    border-radius: 5px;
-    margin: 5px;
-  }
-  
-  .boxes {
-    /* transform: translateY(0); */
-    transition: transform 1s ease-in-out;
-  }
-  
-  .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-  }
-  
-  .buttons {
-    margin: 1rem 0 2rem 0;
-  }
-  
-  button {
-    cursor: pointer;
-    font-size: 1.2rem;
-    margin: 0 0.2rem;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-  }
-  
-  .info {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
-  
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+h3{
+  color: aliceblue;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background: #1a2b45;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.background-div {
+  width: 100%;
+  height: 300px; /* Ajusta según el tamaño del encabezado */
+  background-image: url('/tapGoat.jpg'); /* Imagen de fondo tipo portada */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Necesario para posicionar el perfil dentro */
+}
+.profile-container {
+  position: absolute;
+  bottom: -50px;
+  left: 10%;
+  transform: translateX(-50%);
+  text-align: center; /* Asegura que el texto del nombre esté centrado */
+}
+.profile-div {
+  position:absolute; /* Permite mover el div del perfil */
+  bottom: -50px; /* Lo posiciona justo por debajo del div de fondo */
+  left: 5%; /* Lo centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado real */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Hace la imagen circular */
+  overflow: hidden; /* Oculta cualquier contenido fuera del borde */
+  border: 3px solid white; /* Añade un borde blanco */
+}
+
+.profile-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+}
+.profile-name {
+  margin-top: 200px; /* Separación entre la imagen y el nombre */
+  font-size: 16px;
+  color: rgb(134, 22, 22); /* Ajusta el color del texto */
+  font-weight: bold;
+}
+.doors {
+  display: flex;
+  align-items: center;
+}
+
+.door {
+  background: #fafafa;
+  width: 650px;
+  height: 110px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.boxes {
+  transform: translateY(0);
+  transition: transform 10s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.buttons {
+  margin: 1rem 0 2rem 0;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin: 0 0.2rem;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.info {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
