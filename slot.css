@@ -96,6 +96,7 @@ h3 {
   margin: 5px;
   display: flex;
   justify-content: center;
+  align-items: center; /* Alinea verticalmente las cajas dentro de las puertas */
 }
 
 .boxes {
@@ -109,6 +110,13 @@ h3 {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+  width: 100%;  /* Mantiene el ancho del box constante */
+  height: 100%; /* Asegura que la altura sea consistente */
+  overflow: hidden; /* Asegura que el contenido no desborde */
+  transition: none; /* Elimina cualquier transición dinámica en el tamaño */
+  
+
+
 }
 
 .buttons {
