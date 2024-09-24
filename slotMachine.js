@@ -51,6 +51,7 @@
     "Enrique Cabrera",
     "Alejandra León",
   ];
+  items.sort(() => Math.random() - 0.5);
   const doors = document.querySelectorAll(".door");
 
   document.querySelector("#spinner").addEventListener("click", spin);
