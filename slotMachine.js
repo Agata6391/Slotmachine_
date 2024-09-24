@@ -1,56 +1,21 @@
+function importUserList() {
+  const userInput = prompt("Please enter your comma-separated list:");
+  if (userInput !== null && userInput.trim() !== "") {
+    // Trim and split the input by commas into an array
+    const userArray = userInput
+      .split(",")
+      .map((item) => item.trim())
+      .filter((item) => item !== "");
+    console.log(userArray); // Display the array in the console (or return it)
+    return userArray;
+  } else {
+    console.log("No input provided");
+    return [];
+  }
+}
+
 (function () {
-  const items = [
-    "Carlos Gómez",
-    "María Fernández",
-    "Juan Rodríguez",
-    "Laura Pérez",
-    "José López",
-    "Ana Sánchez",
-    "Luis Ramírez",
-    "Carmen García",
-    "Diego Torres",
-    "Sofia Herrera",
-    "Pedro Díaz",
-    "Elena Ortiz",
-    "Miguel Romero",
-    "Teresa González",
-    "Javier Moreno",
-    "Isabel Ruiz",
-    "Andrés Castro",
-    "Rosa Márquez",
-    "Francisco Vázquez",
-    "Marta Jiménez",
-    "Daniel Navarro",
-    "Victoria Alonso",
-    "Alberto Vega",
-    "Patricia Cortés",
-    "Ricardo Paredes",
-    "Lucía Ríos",
-    "Eduardo Soto",
-    "Natalia Castillo",
-    "Alejandro Mendoza",
-    "Valentina Espinoza",
-    "Fernando Medina",
-    "Carolina Vargas",
-    "Roberto Delgado",
-    "Elena Silva",
-    "David Aguilar",
-    "Andrea Castro",
-    "Jorge Peña",
-    "Julia Flores",
-    "Manuel Serrano",
-    "Claudia Miranda",
-    "Raúl Campos",
-    "Laura Guzmán",
-    "Sergio Herrera",
-    "Daniela Fuentes",
-    "Antonio Suárez",
-    "Cristina Ortiz",
-    "Pablo Ramos",
-    "Lorena Morales",
-    "Enrique Cabrera",
-    "Alejandra León",
-  ];
+  const items = importUserList();
   items.sort(() => Math.random() - 0.5);
   const doors = document.querySelectorAll(".door");
 
@@ -67,7 +32,7 @@
 
       const boxes = door.querySelector(".boxes");
       const boxesClone = boxes.cloneNode(false);
-      const pool = ["❓"];
+      const pool = ["?"];
 
       if (!firstInit) {
         const arr = [];
@@ -75,7 +40,7 @@
           arr.push(...items);
         }
         pool.push(...shuffle(arr));
-        pool.push("❓");
+        pool.push("?");
 
         boxesClone.addEventListener(
           "transitionstart",
@@ -108,12 +73,12 @@
         box.textContent = pool[i];
         boxesClone.appendChild(box);
       }
-      boxesClone.style.transitionDuration = `${duration > 5 ? duration : 10}s`; // ajuste de velocidad de giro
+      boxesClone.style.transitionDuration = `${duration > 1 ? duration : 5}s`; // ajuste de velocidad de giro
       // boxesClone.style.transform = `translateY(-${door.clientHeight * (pool.length - 1)}px)`;
       setTimeout(
         () =>
           (boxesClone.style.transform = `translateY(-${
-            door.clientHeight * (pool.length - 1 - 1)
+            door.clientHeight * (pool.length  - 2.2) 
           }px)`),
         0
       );

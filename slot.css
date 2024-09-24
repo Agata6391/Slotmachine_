@@ -1,140 +1,183 @@
 body {
-   width: 100vw;
-  height: 100vh; 
-  margin: 0;
-  padding: 0; 
-  background-color:#1a2b45 ;
+  width: 100vw;
+ height: 100vh; 
+ margin: 0;
+ padding: 0; 
+ background-color:#1a2b45 ;
 }
 h3 {
-  color: aliceblue;
+ color: aliceblue;
 }
 .slotmachine {
-  width: 100%;
-  height: 100%;
-  background-image: url('/goatcoin.png');/* Imagen de la máquina tragamonedas */
-  background-size: contain;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
+ width: 100%;
+ height: 100%;
+ background-image: url('/goatcoin.png');/* Imagen de la máquina tragamonedas */
+ background-size: contain;
+ background-position: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 20px;
+ box-sizing: border-box;
+ background-repeat: no-repeat;
 }
 #app {
-  width: 25%;
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: flex-start; */
-    align-items: center;
-    position: relative;
-    top: 16.6%;
-    
+ width: 25%;
+   height: 20%;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: flex-start; */
+   align-items: center;
+   position: relative;
+   top: 16.6%;
+   
 }
-  /* width: 80%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
+ /* width: 80%;
+ height: 80%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center; */
 
 .background-div {
-  width: 100%;
-  height: 300px; 
-  background-image: url("/tapGoat.jpg"); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative; 
+ width: 100%;
+ height: 300px; 
+ background-image: url("/tapGoat.jpg"); 
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ position: relative; 
 }
 .profile-container {
-  position: absolute;
-  bottom: -50px;
-  left: 10%;
-  transform: translateX(-50%);
-  text-align: center; 
+ position: absolute;
+ bottom: -50px;
+ left: 10%;
+ transform: translateX(-50%);
+ text-align: center; 
 }
 .profile-div {
-  position: relative; 
-  bottom: -50px; /* Lo posiciona justo por debajo del div de fondo */
-  left: 5%; 
-  transform: translateX(-50%); 
-  width: 100px;
-  height: 100px;
-  border-radius: 50%; 
-  overflow: hidden; 
-  border: 3px solid white; 
+ position: relative; 
+ bottom: -50px; /* Lo posiciona justo por debajo del div de fondo */
+ left: 5%; 
+ transform: translateX(-50%); 
+ width: 100px;
+ height: 100px;
+ border-radius: 50%; 
+ overflow: hidden; 
+ border: 3px solid white; 
 }
 
 .profile-div img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+ width: 100%;
+ height: 100%;
+ object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
 }
 .profile-name {
-  position: relative;
-  margin-top: 20px; /* Separación entre la imagen y el nombre */
-  font-size: 26px;
-  color: rgb(134, 22, 22); /* Ajusta el color del texto */
-  font-weight: bold;
+ position: relative;
+ margin-top: 20px; /* Separación entre la imagen y el nombre */
+ font-size: 26px;
+ color: rgb(134, 22, 22); /* Ajusta el color del texto */
+ font-weight: bold;
 }
 .doors {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+ display: flex;
+ width: 100%;
+ height: 100%;
+ align-items: center;
+ justify-content: center;
 }
 
 .door {
-  background: #fafafa;
-  width: 70%;
-  height: 90%;
-  overflow: hidden;
-  border-radius: 5px;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Alinea verticalmente las cajas dentro de las puertas */
+ background: #fafafa;
+ width: 70%;
+ height: 90%;
+ overflow: hidden;
+ border-radius: 5px;
+ margin: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center; /* Alinea verticalmente las cajas dentro de las puertas */
 }
 
 .boxes {
-  transform: translateY(0);
-  transition: transform 10s ease-in-out;
-  transition-delay: 0.1s;
+ transform: translateY(0);
+ transition: transform 10s ease-in-out;
+ transition-delay: 0.1s;
 }
 
 .box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.4rem;
-  width: 100%;  /* Mantiene el ancho del box constante */
-  height: 100%; /* Asegura que la altura sea consistente */
-  overflow: hidden; /* Asegura que el contenido no desborde */
-  transition: none; /* Elimina cualquier transición dinámica en el tamaño */
-  
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 1.4rem;
+ width: 100%;  /* Mantiene el ancho del box constante */
+ height: 100%; /* Asegura que la altura sea consistente */
+ overflow: hidden; /* Asegura que el contenido no desborde */
+ transition: none; /* Elimina cualquier transición dinámica en el tamaño */
+ 
 
 
 }
 
 .buttons {
-  margin: 1rem 0 2rem 0;
+ margin: 1rem 0 2rem 0;
 }
 
 button {
-  cursor: pointer;
-  font-size: 1.2rem;
-  margin: 0 0.2rem;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
+ cursor: pointer;
+ font-size: 1.2rem;
+ margin: 0 0.2rem;
+ border: none;
+ border-radius: 5px;
+ padding: 10px 15px;
 }
 
 .info {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+ text-align: center;
+}
+
+
+.boxes {
+ height: 20px;
+}
+
+.doors {
+ mix-blend-mode: color-burn;
+ width: calc(100% + 200px);
+}
+
+.box {
+ width: 100% !important;
+ padding: 0 0 1px 0;
+ font-family: sans-serif;
+ font-weight: bold;
+ color: #404040;
+}
+
+div#app {
+ margin-top: 125px;
+}
+
+.buttons > button {
+ text-transform: uppercase;
+ font-weight: bold;
+ font-size: 20px;
+ color: white;
+ background: #00247c;
+ border: solid 2px #ff7500;
+ border-radius: 7px;
+ margin-top: 60px;
+}
+
+button#reseter {
+ background: #ff406f;
+ border-color: #f8fded;
+}
+
+.slotmachine {
+ width: 900px;
+ margin: auto;
 }
