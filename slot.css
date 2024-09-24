@@ -1,6 +1,6 @@
 body {
-  width: 100vw;
-  height: 100vh;
+   width: 100vw;
+  height: 100vh; 
   margin: 0;
   padding: 0; 
   background-color:#1a2b45 ;
@@ -11,24 +11,34 @@ h3 {
 .slotmachine {
   width: 100%;
   height: 100%;
-  background-image: url('/casino_machine.jpg'); /* Imagen de la máquina tragamonedas */
-  background-size: cover;
+  background-image: url('/goatcoin.png');/* Imagen de la máquina tragamonedas */
+  background-size: contain;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  background-repeat: no-repeat;
 }
 #app {
-  width: 100%;
-  height: 100%;
-  background: #1a2b45;
+  width: 25%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: center;
+    position: relative;
+    top: 16.6%;
+    
+}
+  /* width: 80%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; */
+
 .background-div {
   width: 100%;
   height: 300px; 
@@ -71,16 +81,21 @@ h3 {
 }
 .doors {
   display: flex;
+  width: 100%;
+  height: 100%;
   align-items: center;
+  justify-content: center;
 }
 
 .door {
   background: #fafafa;
-  width: 650px;
-  height: 110px;
+  width: 70%;
+  height: 90%;
   overflow: hidden;
   border-radius: 5px;
   margin: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .boxes {
@@ -93,7 +108,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 1.4rem;
 }
 
 .buttons {
